@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather + AQI + Forecast</title>
+    <link rel="stylesheet" href="Design.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+
+  <body>
+  
+    <div class="theme-toggle">
+      <img id="theme-icon" src="dark theme icon/sun.png" alt="theme toggle" />
+    </div>
+    
+
+    <main class="card">
+      
+      <section class="weather" id="weatherSectionWrapper">
+        <h1>Weather App</h1>
+        <div class="search">
+          <input id="cityInput" type="text" placeholder="Enter city name..." />
+          <button id="searchBtn">
+            <img src="images/search.png" alt="search" />
+          </button>
+        </div>
+
+        <div class="error" id="error" hidden>
+          <p>Invalid city name. Try again.</p>
+        </div>
+
+        <div id="weather" hidden>
+          <img
+            class="weather-icon"
+            id="weatherIcon"
+            src="images/clear.png"
+            alt="Weather icon"
+          />
+
+          <h2 class="city" id="city">City</h2>
+          <h3 class="country" id="country">Country</h3>
+
+          <p class="local-time" id="localTime">Local Time: :</p>
+
+          <div class="main-row">
+            <h1 class="temp" id="temp">°C</h1>
+
+            <div class="meta">
+              <div>
+                <img src="images/humidity.png" />
+                <p><span id="humidity"></span><small>Humidity</small></p>
+              </div>
+
+              <div>
+                <img src="images/wind.png" />
+                <p><span id="wind"></span><small>Wind</small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sun-row">
+            <p><strong>Sunrise:</strong> <span id="sunrise">:</span></p>
+            <p><strong>Sunset:</strong> <span id="sunset">:</span></p>
+          </div>
+
+          <div class="aqi-block" id="aqiBlock" hidden>
+            <div class="aqi-header">
+              <div>
+                <p class="aqi-value" id="aqiValue">AQI:</p>
+                <p class="aqi-desc" id="aqiDesc">Air Quality:</p>
+              </div>
+              <div class="aqi-numbers">
+                <small>PM2.5: <span id="pm25"></span> µg/m³</small>
+              </div>
+            </div>
+
+            <div class="aqi-bar-outer">
+              <div class="aqi-bar-inner" id="aqiBar"></div>
+            </div>
+
+            <div class="aqi-legend">
+              <span>Good</span>
+              <span>Fair</span>
+              <span>Moderate</span>
+              <span>Poor</span>
+              <span>Very Poor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="forecast" id="forecast" hidden>
+        <h4>3-Day Forecast</h4>
+        <div class="forecast-scroll" id="forecastScroll"></div>
+      </section>
+    </main>
+
+    <script src="Server.js"></script>
+  </body>
+</html>
