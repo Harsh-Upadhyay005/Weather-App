@@ -18,10 +18,10 @@ body {
   align-items: center;
   padding: 0;
   color: #000;
-  overflow: hidden; /* full-page clean layout */
+  overflow: hidden; 
 }
 
-/* ========= MAIN LAYOUT ========= */
+
 .card {
   height: 95vh;
   width: 95vw;
@@ -35,7 +35,7 @@ body {
   overflow: hidden;
 }
 
-/* LEFT weather section */
+ /* LEFT weather section  */
 .weather {
   flex: 2;
   padding-right: 20px;
@@ -52,7 +52,7 @@ body {
   overflow-y: auto;
 }
 
-/* ========= Search ========= */
+/*  Search  */
 .search {
   display: flex;
   gap: 12px;
@@ -84,7 +84,7 @@ body {
   height: 22px;
 }
 
-/* ========= Weather Area ========= */
+/*  Weather Area  */
 .weather .weather-icon {
   width: 120px;
   margin: 10px auto;
@@ -214,7 +214,7 @@ body {
 }
 
 
-/* ========= Forecast Cards ========= */
+/* Forecast Cards  */
 .forecast h4 {
   font-size: 20px;
   margin-bottom: 12px;
@@ -238,7 +238,7 @@ body {
   width: 60px;
 }
 
-/* ========= Theme Toggle ========= */
+/*  Theme Toggle  */
 .theme-toggle {
   position: fixed;
   right: 22px;
@@ -248,7 +248,7 @@ body {
   z-index: 100;
 }
 
-/* ========= Responsive ========= */
+/*  Responsive  */
 
 /* Mobile – make forecast go down */
 @media (max-width: 820px) {
@@ -269,7 +269,7 @@ body {
     overflow-y: auto;
   }
 }
-/* ---------- Theme Toggle Button ---------- */
+/* Theme Toggle Button  */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -312,7 +312,7 @@ body {
   }
 }
 
-/* ===== DARK MODE FULL FIX ===== */
+/*  DARK MODE FULL FIX  */
 body.dark-mode {
   background: linear-gradient(135deg, #0c0f13, #1c1f24, #2b3138);
   color: #f5f5f5;

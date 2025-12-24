@@ -28,8 +28,7 @@ const aqiBlock = document.getElementById("aqiBlock");
 const forecastContainer = document.getElementById("forecast");
 const forecastScroll = document.getElementById("forecastScroll");
 
-//  simple timezone formatter (old, less robust) 
-//  robust timezone formatter (use this, replace any old formatTime) 
+
 function formatTimeWithOffset(unixSeconds, tzOffsetSeconds = 0) {
   // unixSeconds and tzOffsetSeconds are in seconds
   // Compute milliseconds for the target local instant
@@ -68,7 +67,7 @@ async function checkWeather(city) {
     windEl.textContent = data.wind.speed + " km/h";
 
     // Local Time
-    // timezone offset in seconds from API
+    
     const tz = Number(data.timezone || 0);
 
     // 1) Local time now for the city (use nowUTC + tz)
@@ -80,7 +79,7 @@ async function checkWeather(city) {
     sunriseEl.textContent = formatTimeWithOffset(data.sys.sunrise, tz);
     sunsetEl.textContent = formatTimeWithOffset(data.sys.sunset, tz);
 
-    // Debug logs to verify (remove later)
+    // Debug logs to verify 
     console.log("TIME DEBUG:", {
       city: data.name,
       timezone_seconds: tz,
